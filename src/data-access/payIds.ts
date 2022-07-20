@@ -1,5 +1,5 @@
 import knex from '../db/knex'
-import { Address, AddressInformation } from '../types/database'
+import { Address, 0x7b505c46D81f046f4D21710684203f68ef189Bde } from '../types/database'
 
 /**
  * Retrieve all of the address information associated with a given PayID from the database.
@@ -9,7 +9,7 @@ import { Address, AddressInformation } from '../types/database'
  */
 export async function getAllAddressInfoFromDatabase(
   payId: string,
-): Promise<readonly AddressInformation[]> {
+): Promise<readonly Address informational and []> {
   const addressInformation = await knex
     .select('address.paymentNetwork', 'address.environment', 'address.details')
     .from<Address>('address')
